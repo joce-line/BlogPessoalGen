@@ -38,7 +38,7 @@ namespace BlogPessoal.src.controladores
         /// </summary>
         /// <returns>ActionResult</returns>
         /// <response code="200">Lista de usuarios</response>
-        /// <response code="204">Lista vasia</response>
+        /// <response code="204">Lista vazia</response>
         [HttpGet("todos")]
         [Authorize]
         public async Task<ActionResult> PegarTodosUsuariosAsync()
@@ -118,9 +118,9 @@ namespace BlogPessoal.src.controladores
         ///
         ///     POST /api/Usuarios/cadastrar
         ///     {
-        ///        "nome": "Gustavo Boaz",
-        ///        "email": "gustavo@domain.com",
-        ///        "senha": "134652",
+        ///        "nome": "Joceline Gutierrez",
+        ///        "email": "joceline@email.com",
+        ///        "senha": "12345",
         ///        "foto": "URLFOTO",
         ///        "tipo": "NORMAL"
         ///     }
@@ -154,8 +154,8 @@ namespace BlogPessoal.src.controladores
         ///     PUT /api/Usuarios
         ///     {
         ///        "id": 1,    
-        ///        "nome": "Gustavo Boaz",
-        ///        "senha": "134652",
+        ///        "nome": "Joceline Gutierrez",
+        ///        "senha": "12345",
         ///        "foto": "URLFOTO",
         ///        "tipo": "ADMINISTRADOR"
         ///     }
@@ -190,8 +190,8 @@ namespace BlogPessoal.src.controladores
         ///
         ///     POST /api/Usuarios/logar
         ///     {
-        ///        "email": "gustavo@domain.com",
-        ///        "senha": "134652"
+        ///        "email": "joceline@email.com",
+        ///        "senha": "12345"
         ///     }
         ///
         /// </remarks>

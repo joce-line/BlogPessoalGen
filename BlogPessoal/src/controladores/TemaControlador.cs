@@ -37,7 +37,7 @@ namespace BlogPessoal.src.controladores
         /// <response code="200">Lista de temas</response>
         /// <response code="204">Lista vasia</response>
         [HttpGet]
-        [Authorize]
+        [AllowAnonymous]
         public async Task<ActionResult> PegarTodosTemasAsync()
         {
             var lista = await _repositorio.PegarTodosTemasAsync();
@@ -55,7 +55,7 @@ namespace BlogPessoal.src.controladores
         /// <response code="200">Retorna o tema</response>
         /// <response code="404">Tema não existente</response>
         [HttpGet("id/{idTema}")]
-        [Authorize]
+        [AllowAnonymous]
         public async Task<ActionResult> PegarTemaPeloIdAsync([FromRoute] int idTema)
         {
             try
@@ -76,7 +76,7 @@ namespace BlogPessoal.src.controladores
         /// <response code="200">Retorna temas</response>
         /// <response code="204">Descrição não existe</response>
         [HttpGet("pesquisa")]
-        [Authorize]
+        [AllowAnonymous]
         public async Task<ActionResult> PegarTemasPelaDescricaoAsync([FromQuery] string descricaoTema)
         {
             var temas = await _repositorio.PegarTemasPelaDescricaoAsync(descricaoTema);
